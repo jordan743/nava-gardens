@@ -1,0 +1,263 @@
+/* ── Accommodations Page ────────────────────────── */
+.ac-page {
+  display: flex;
+  flex-direction: column;
+  background: #FDF3E2;
+}
+
+/* Nav bar above hero */
+.ac-nav-bar {
+  background: #FDF3E2;
+}
+
+/* Hero images */
+.ac-hero {
+  position: relative;
+  display: flex;
+  height: 98vh;
+}
+
+.ac-hero-half {
+  flex: 1;
+  overflow: hidden;
+}
+
+.ac-hero-half img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.ac-hero-diamond {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 190px;
+  height: 190px;
+  display: block;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Body content */
+.ac-body {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  box-sizing: border-box;
+}
+
+/* Header row */
+.ac-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.ac-label-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #272727;
+  padding: 10px 15px;
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: #272727;
+  text-transform: uppercase;
+  background: #FDF3E2;
+  white-space: nowrap;
+}
+
+.ac-header-ornament {
+  width: 52px;
+  height: auto;
+  display: block;
+  transform: rotate(90deg);
+}
+
+/* Cards row */
+.ac-cards-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+.ac-card {
+  flex: 1;
+  border: 3px solid #272727;
+  display: flex;
+  flex-direction: column;
+  background: #FFF1D9;
+  box-sizing: border-box;
+}
+
+.ac-card-photo-wrap {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.ac-card-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.ac-card-photo--active {
+  opacity: 1;
+}
+
+.ac-card-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 1;
+}
+
+.ac-card-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.ac-card-dot--active {
+  background: #FDF3E2;
+}
+
+.ac-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1;
+  border-top: 3px solid #272727;
+}
+
+.ac-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ac-card-title {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.1;
+  color: #272727;
+}
+
+.ac-card-badge {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #CB5A38;
+  text-transform: uppercase;
+}
+
+.ac-card-text {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #272727;
+}
+
+.ac-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 3px solid #272727;
+  padding: 10px 20px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: #272727;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.2s ease;
+}
+
+.ac-card-btn:hover {
+  background: #FAC553;
+}
+
+/* Diamond divider between cards */
+.ac-card-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  position: relative;
+}
+
+.ac-card-divider-diamond {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #272727;
+  transform: rotate(45deg);
+  background: #BAE8E5;
+  flex-shrink: 0;
+}
+
+/* CTA bar */
+.ac-cta-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  border: 3px solid #272727;
+  padding: 32px;
+  box-sizing: border-box;
+  background: #FFF1D9;
+}
+
+.ac-cta-headline {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.1;
+  color: #272727;
+  flex-shrink: 0;
+}
+
+.ac-cta-body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.2;
+  color: #272727;
+  flex: 1;
+  min-width: 0;
+}
+
+.ac-cta-btn {
+  flex-shrink: 0;
+}

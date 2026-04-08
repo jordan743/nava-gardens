@@ -1,0 +1,183 @@
+/* ── Shared Legal / Info Pages ───────────────────── */
+.lp-page {
+  display: flex;
+  flex-direction: column;
+  background: #FDF3E2;
+  min-height: 100vh;
+}
+
+/* Hero */
+.lp-hero {
+  background: #5F3207;
+  padding: 32px 48px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+
+.lp-hero-body {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lp-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid #FDF3E2;
+  padding: 6px 12px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #FDF3E2;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+.lp-hero-headline {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1.05;
+  color: #FDF3E2;
+}
+
+/* Content */
+.lp-content {
+  padding: 72px 48px;
+  box-sizing: border-box;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.lp-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lp-section-title {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #272727;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #272727;
+}
+
+.lp-section-headline {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.15;
+  color: #272727;
+}
+
+.lp-body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #272727;
+}
+
+.lp-body + .lp-body {
+  margin-top: -8px;
+}
+
+.lp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.lp-list li {
+  display: flex;
+  gap: 12px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #272727;
+}
+
+.lp-list li::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: #272727;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.lp-meta {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #6b5b4a;
+  padding-top: 8px;
+  border-top: 1px solid #c8bba9;
+}
+
+/* FAQ accordion */
+.lp-faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.lp-faq-item {
+  border-bottom: 3px solid #272727;
+}
+
+
+.lp-faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lp-faq-question-text {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #272727;
+}
+
+.lp-faq-chevron {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.25s ease;
+}
+
+.lp-faq-chevron--open {
+  transform: rotate(180deg);
+}
+
+.lp-faq-answer {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #272727;
+  padding-bottom: 20px;
+  max-width: 680px;
+}

@@ -1,0 +1,369 @@
+/* ── Team Page ───────────────────────────────── */
+.team-page {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFC;
+}
+
+/* Hero */
+.team-hero {
+  position: relative;
+  height: 98vh;
+  background: #256C39;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 12px off-white border — left, right, top only */
+  border-top: 12px solid #FDF3E2;
+  border-left: 12px solid #FDF3E2;
+  border-right: 12px solid #FDF3E2;
+  box-sizing: border-box;
+}
+
+/* Corner motifs — two-column frame, centered over the photo */
+.team-hero-corners {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(63vw, 910px);
+  height: 74%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.team-hero-corner-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team-hero-corner-col--left {
+  transform: scaleX(-1);
+}
+
+.team-corner-motif {
+  width: clamp(80px, 10.6vw, 153px);
+  height: auto;
+  display: block;
+}
+
+/* Masked photo container */
+.team-hero-masked {
+  position: relative;
+  width: min(67vw, 966px);
+  aspect-ratio: 966 / 689;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.team-hero-photo-wrap {
+  position: absolute;
+  inset: 0;
+  mask-image: url('/assets/team-hero-mask-landscape.svg');
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.team-hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.team-hero-intersect {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Quote section */
+.team-quote {
+  background: #FDF3E2;
+  padding: 72px 48px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.team-quote-text {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 1.1;
+  color: #272727;
+  width: 100%;
+}
+
+/* Team rows */
+.team-row {
+  padding: 32px 12px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.team-row-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.team-row-label {
+  background: #FDF3E2;
+  border: 3px solid #272727;
+  padding: 10px 15px;
+}
+
+.team-row-label span {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.12;
+  color: #272727;
+  text-transform: uppercase;
+}
+
+.team-row-label-deco {
+  width: 42px;
+  height: auto;
+  transform: rotate(130deg) scaleY(-1);
+}
+
+.team-row-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+/* Diamond bounce animation */
+@keyframes diamondBounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-22px); }
+  55%  { transform: translateY(-5px); }
+  75%  { transform: translateY(-14px); }
+  90%  { transform: translateY(-2px); }
+  100% { transform: translateY(0); }
+}
+
+.team-diamond-wave {
+  animation: diamondBounce 0.55s ease-out both;
+}
+
+/* Diamond separator */
+.team-diamond-spacer {
+  flex-shrink: 0;
+  width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.team-diamond-inner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #272727;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* Team card */
+.team-card {
+  flex: 1;
+  min-width: 0;
+  border: 3px solid #272727;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card-photo {
+  height: 418px;
+  border-bottom: 3px solid #272727;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d8d4cc;
+}
+
+.team-card-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.team-card-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(#b8b4ac 0% 25%, #d8d4cc 0% 50%) 0 0 / 20px 20px;
+  opacity: 0.5;
+}
+
+.team-card-name {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  color: #272727;
+}
+
+.team-card-role {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  color: #272727;
+  margin-top: 5px;
+}
+
+.team-card-bio-wrap {
+  flex: 1;
+}
+
+.team-card-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+  color: #272727;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.team-card-chevron {
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.team-card-read-more:hover .team-card-chevron {
+  transform: translateX(4px);
+}
+
+.team-card-read-more--open .team-card-chevron {
+  transform: rotate(180deg);
+}
+
+.team-card-read-more--open:hover .team-card-chevron {
+  transform: rotate(180deg) translateX(-4px);
+}
+
+/* Expand animation */
+.team-card-info {
+  background: #FDF3E2;
+  padding: 32px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: min-height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.team-card--expanded .team-card-info {
+  min-height: 360px;
+}
+
+.team-card-bio {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.2;
+  color: #272727;
+  transition: opacity 0.25s ease;
+}
+
+/* Outdoor / community section */
+.team-outdoor {
+  position: relative;
+  height: 800px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 12px 100px;
+}
+
+.team-outdoor-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.team-outdoor-tiles {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  width: 100%;
+  max-width: 1300px;
+  justify-content: center;
+}
+
+.team-outdoor-tile {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.team-outdoor-diamond {
+  position: relative;
+  width: 252px;
+  height: 252px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-outdoor-diamond-inner {
+  position: absolute;
+  width: 178px;
+  height: 178px;
+  background: #BAE8E5;
+  border: 2.8px solid #272727;
+  transform: rotate(45deg);
+}
+
+.team-outdoor-diamond-text {
+  position: relative;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 1.26px;
+  color: #272727;
+  text-align: center;
+  width: 191px;
+}
+
+.team-outdoor-vector {
+  width: 252px;
+  height: auto;
+  flex-shrink: 0;
+}
+

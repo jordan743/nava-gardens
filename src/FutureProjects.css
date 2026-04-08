@@ -1,0 +1,224 @@
+/* ── Future Projects Page ─────────────────────── */
+.fp-page {
+  display: flex;
+  flex-direction: column;
+  background: #FDF3E2;
+}
+
+/* Hero */
+.fp-hero {
+  height: 400px;
+  background: #FDF3E2;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 48px;
+}
+
+.fp-hero-headline {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 1.1;
+  color: #272727;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Project rows */
+.fp-row {
+  padding: 32px 12px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.fp-row-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.fp-row-label {
+  background: #FDF3E2;
+  border: 3px solid #272727;
+  padding: 10px 15px;
+}
+
+.fp-row-label span {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.12;
+  color: #272727;
+  text-transform: uppercase;
+}
+
+.fp-row-label-deco {
+  width: 42px;
+  height: auto;
+  transform: rotate(130deg) scaleY(-1);
+}
+
+.fp-row-inner {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+/* Project card */
+.fp-card {
+  flex: 1;
+  min-width: 0;
+  border: 3px solid #272727;
+  display: flex;
+  flex-direction: column;
+  background: #FDF3E2;
+}
+
+.fp-card-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-bottom: 3px solid #272727;
+}
+
+.fp-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.fp-card-body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fp-card-title {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.1;
+  color: #272727;
+}
+
+.fp-card-desc {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #272727;
+}
+
+/* CTA card */
+.fp-cta-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px 32px;
+  background: #FDF3E2;
+  align-self: center;
+}
+
+.fp-cta-heading {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.12;
+  color: #272727;
+}
+
+.fp-cta-body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #272727;
+}
+
+.fp-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FAC553;
+  border: 3px solid #272727;
+  padding: 10px 18px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  color: #272727;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.2s ease;
+}
+
+.fp-cta-btn:hover {
+  background: #FFF1D9;
+}
+
+/* Partnerships */
+.fp-partnerships {
+  background: #FDF3E2;
+  border-top: 3px solid #272727;
+  border-bottom: 3px solid #272727;
+  padding: 48px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.fp-partnerships-heading {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #272727;
+}
+
+.fp-marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.fp-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 128px;
+  width: max-content;
+  animation: fpMarquee 28s linear infinite;
+}
+
+@keyframes fpMarquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.fp-partner-logo {
+  height: auto;
+  width: auto;
+  max-height: 80px;
+  flex-shrink: 0;
+  opacity: 0.5;
+  display: block;
+}
+
+/* Helena Symphony is square — render larger to match visual weight */
+.fp-partner-logo--square {
+  height: 160px;
+  width: 160px;
+  object-fit: contain;
+}

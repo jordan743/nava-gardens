@@ -1,0 +1,282 @@
+/* ── Event Spaces Page ─────────────────────────── */
+.es-page {
+  display: flex;
+  flex-direction: column;
+  background: #FDF3E2;
+}
+
+/* Hero */
+.es-hero {
+  height: 400px;
+  background: #5F3207;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 48px;
+}
+
+.es-hero-headline {
+  font-family: 'TerraneSerif', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 1.1;
+  color: #FDF3E2;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Weddings section */
+.es-section {
+  background: #FDF3E2;
+  border-top: 3px solid #272727;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 12px;
+  box-sizing: border-box;
+}
+
+/* Section header — overlaid on photo */
+.es-section-header {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.es-label-pill {
+  border: 3px solid #272727;
+  background: #FFF1D9;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.es-label-pill--serif {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.12;
+  color: #272727;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.es-amenity-pills {
+  display: flex;
+  margin-left: 32px;
+}
+
+.es-amenity-pill {
+  border: 3px solid #272727;
+  background: #FFF1D9;
+  padding: 10px 15px;
+  margin-left: -3px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #272727;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.es-ornament {
+  width: 48px;
+  height: auto;
+  transform: rotate(129.66deg) scaleY(-1);
+  flex-shrink: 0;
+}
+
+/* Content row */
+.es-content-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Side diamonds */
+.es-side-diamond {
+  width: 31px;
+  height: 31px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.es-diamond-inner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #272727;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* Content box */
+.es-content-box {
+  flex: 1;
+  min-width: 0;
+  border: 3px solid #272727;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Photo */
+.es-photo-wrap {
+  position: relative;
+  height: 509px;
+  overflow: hidden;
+  border-bottom: 3px solid #272727;
+  box-sizing: border-box;
+}
+
+.es-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.es-photo--active {
+  opacity: 1;
+}
+
+.es-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 1;
+}
+
+.es-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(253, 243, 226, 0.5);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease;
+}
+
+.es-dot--active {
+  background: #FDF3E2;
+}
+
+/* Info row */
+.es-info-row {
+  display: flex;
+  min-height: 271px;
+}
+
+.es-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #FFF1D9;
+}
+
+.es-info-col--desc {
+  flex: 1;
+  min-width: 0;
+  border-right: 3px solid #272727;
+}
+
+.es-info-col--capacity {
+  flex-shrink: 0;
+  width: 200px;
+  gap: 18px;
+  border-right: 3px solid #272727;
+}
+
+.es-info-col--body {
+  flex: 1;
+  min-width: 0;
+}
+
+.es-info-headline {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.1;
+  color: #272727;
+}
+
+.es-info-label {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #272727;
+}
+
+.es-info-capacity {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.1;
+  color: #272727;
+}
+
+.es-info-body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.2;
+  color: #272727;
+}
+
+/* Buttons */
+.es-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #272727;
+  cursor: pointer;
+  align-self: flex-start;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.es-btn--outline {
+  background: #FDF3E2;
+  border: 3px solid #272727;
+}
+
+.es-btn--outline:hover {
+  background: #FAC553;
+}
+
+.es-btn--yellow {
+  background: #FAC553;
+  border: 3px solid #272727;
+}
+
+.es-btn--yellow:hover {
+  background: #FFF1D9;
+}

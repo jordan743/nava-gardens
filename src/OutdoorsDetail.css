@@ -1,0 +1,494 @@
+/* ── Outdoors Detail Page ──────────────────────── */
+.od-page {
+  display: flex;
+  flex-direction: column;
+  background: #FDF3E2;
+}
+
+/* Hero */
+.od-hero {
+  background: #256C39;
+  padding: 32px 48px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.od-hero-body {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.od-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid #FDF3E2;
+  padding: 6px 12px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #FDF3E2;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+.od-hero-headline {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 1.05;
+  color: #FDF3E2;
+}
+
+/* Content wrapper */
+.od-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 48px;
+  box-sizing: border-box;
+}
+
+/* Photo grid */
+.od-photo-grid {
+  display: flex;
+  gap: 24px;
+  height: 500px;
+  box-sizing: border-box;
+}
+
+.od-photo-main {
+  flex: 0 0 calc(75% - 12px);
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid #272727;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.od-photo-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.od-view-all-btn {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FDF3E2;
+  border: 3px solid #272727;
+  padding: 8px 14px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: #272727;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.od-view-all-btn:hover {
+  background: #FAC553;
+}
+
+.od-photo-sub-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 24px;
+}
+
+.od-photo-sub-item {
+  overflow: hidden;
+  border: 3px solid #272727;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.od-photo-sub-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Stats bar */
+.od-stats-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.od-stats-pills {
+  display: flex;
+}
+
+.od-stats-pill {
+  border: 3px solid #272727;
+  background: #FFF1D9;
+  padding: 10px 15px;
+  margin-left: -3px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #272727;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.od-stats-right {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.od-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #272727;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.od-stat-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Description + Features */
+.od-desc-box {
+  display: flex;
+  border: 3px solid #272727;
+  box-sizing: border-box;
+}
+
+.od-desc-left {
+  flex: 0 0 48%;
+  padding: 32px;
+  background: #FFF1D9;
+  border-right: 3px solid #272727;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.od-desc-headline {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 1.1;
+  color: #272727;
+}
+
+.od-desc-body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.2;
+  color: #272727;
+}
+
+.od-desc-right {
+  flex: 1;
+  padding: 32px;
+  background: #FFF1D9;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.od-features-label {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #272727;
+  text-transform: uppercase;
+}
+
+.od-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.od-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #272727;
+}
+
+.od-feature-bullet {
+  width: 7px;
+  height: 7px;
+  background: #272727;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.od-features-note {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.2;
+  color: #272727;
+}
+
+/* Policy row */
+.od-policy-row {
+  display: flex;
+  border: 3px solid #272727;
+  box-sizing: border-box;
+}
+
+.od-policy-box {
+  flex: 1;
+  padding: 32px;
+  background: #FFF1D9;
+  border-right: 3px solid #272727;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.od-policy-box:last-child {
+  border-right: none;
+}
+
+.od-policy-title {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 1.12;
+  color: #272727;
+}
+
+.od-policy-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.2;
+  color: #272727;
+}
+
+.od-policy-body-text {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.2;
+  color: #272727;
+}
+
+.od-policy-link {
+  color: #CB5A38;
+  text-decoration: none;
+}
+
+.od-policy-link:hover {
+  text-decoration: underline;
+}
+
+.od-policy-fine-print {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #272727;
+}
+
+.od-read-more {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #272727;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.od-read-more-arrow {
+  width: 17px;
+  height: auto;
+  display: block;
+  transform: rotate(90deg);
+  transition: transform 0.2s ease;
+}
+
+.od-read-more-arrow--open {
+  transform: rotate(-90deg);
+}
+
+/* CTA row */
+.od-cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 48px;
+  background: #FDF3E2;
+}
+
+.od-cta-ornament {
+  width: 42px;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+.od-cta-ornament--l {
+  transform: rotate(50.34deg);
+}
+
+.od-cta-ornament--r {
+  transform: rotate(50.34deg) scaleX(-1);
+}
+
+.od-cta-btn {
+  align-self: auto;
+}
+
+/* Lightbox */
+.od-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.od-lightbox-img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+}
+
+.od-lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: none;
+  border: none;
+  color: #FDF3E2;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.od-lightbox-close svg {
+  display: block;
+}
+
+.od-lightbox-prev,
+.od-lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.od-lightbox-prev {
+  left: 32px;
+}
+
+.od-lightbox-next {
+  right: 32px;
+}
+
+.od-lightbox-arrow-img {
+  width: 64px;
+  height: auto;
+  display: block;
+}
+
+.od-lightbox-arrow-img--flipped {
+  transform: scaleX(-1);
+}
+
+.od-lightbox-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.od-lightbox-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.15s ease;
+}
+
+.od-lightbox-dot--active {
+  background: #FDF3E2;
+}
+
+.od-lightbox-counter {
+  position: absolute;
+  top: 28px;
+  left: 32px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(253, 243, 226, 0.7);
+}

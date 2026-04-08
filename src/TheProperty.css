@@ -1,0 +1,125 @@
+/* ── The Property Page ────────────────────────── */
+.prop-page {
+  display: flex;
+  flex-direction: column;
+  background: #FFF1D9;
+}
+
+/* ── Hero ─────────────────────────────────────── */
+.prop-hero {
+  position: relative;
+  height: 98vh;
+  background: #FFF1D9;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-bottom: 3px solid #272727;
+}
+
+.prop-hero-sketch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+  width: 94%;
+  max-width: 1075px;
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+.prop-hero-title {
+  position: absolute;
+  bottom: 48px;
+  left: 48px;
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 1.1;
+  color: #272727;
+  margin: 0;
+}
+
+/* ── Property Section ─────────────────────────── */
+.prop-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-bottom: 3px solid #272727;
+}
+
+.prop-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 64px 48px 32px;
+}
+
+.prop-section-left {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.prop-label-pill {
+  border: 3px solid #272727;
+  background: #FFF1D9;
+  padding: 10px 15px;
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.12;
+  color: #272727;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.prop-amenity-pills {
+  display: flex;
+  margin-left: 32px;
+}
+
+.prop-amenity-pill {
+  border: 3px solid #272727;
+  background: #FFF1D9;
+  padding: 10px 15px;
+  margin-left: -3px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #272727;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.prop-section-deco {
+  width: 42px;
+  height: auto;
+  transform: rotate(130deg) scaleY(-1);
+}
+
+/* ── Video row ────────────────────────────────── */
+.prop-video-row {
+  display: flex;
+  align-items: center;
+  padding: 0 12px 48px;
+  gap: 10px;
+}
+
+.prop-video-wrap {
+  flex: 1;
+  min-width: 0;
+  border: 3px solid #272727;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.prop-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

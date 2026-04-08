@@ -1,0 +1,307 @@
+/* ── Event Spaces Inquiry Page ─────────────────── */
+.esi-page {
+  display: flex;
+  flex-direction: column;
+  background: #FDF3E2;
+}
+
+/* Hero */
+.esi-hero {
+  background: #5F3207;
+  padding: 32px 48px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.esi-hero-body {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.esi-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid #FDF3E2;
+  padding: 6px 12px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #FDF3E2;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+.esi-hero-headline {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 1.05;
+  color: #FDF3E2;
+}
+
+/* Form section */
+.esi-form-section {
+  padding: 64px 48px;
+  box-sizing: border-box;
+}
+
+.esi-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Column */
+.esi-col {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.esi-col-header {
+  display: inline-flex;
+  align-items: center;
+  border: 3px solid #272727;
+  padding: 7px 12px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #272727;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+/* Field groups */
+.esi-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.esi-label {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #272727;
+  text-transform: uppercase;
+}
+
+/* Text inputs */
+.esi-input {
+  background: none;
+  border: none;
+  border-bottom: 3px solid #272727;
+  padding: 8px 0;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #272727;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.esi-input::placeholder {
+  color: #9e8e7a;
+}
+
+.esi-input:focus {
+  border-bottom-color: #5F3207;
+}
+
+.esi-input--fixed {
+  color: #9e8e7a;
+  border-bottom-style: dashed;
+  cursor: not-allowed;
+}
+
+/* Selects */
+.esi-select-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.esi-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  border-bottom: 3px solid #272727;
+  padding: 8px 28px 8px 0;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #272727;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+}
+
+.esi-select:focus {
+  border-bottom-color: #5F3207;
+}
+
+.esi-select-chevron {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #272727;
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* Date row */
+.esi-date-row {
+  display: flex;
+  gap: 12px;
+}
+
+.esi-select-wrap--date {
+  flex: 1;
+}
+
+/* Radio buttons */
+.esi-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #272727;
+  cursor: pointer;
+  position: relative;
+}
+
+.esi-radio-label input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.esi-radio-custom {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid #272727;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.esi-radio-label input[type="radio"]:checked + .esi-radio-custom::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #272727;
+  display: block;
+}
+
+/* Checkbox */
+.esi-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #272727;
+  cursor: pointer;
+  position: relative;
+}
+
+.esi-checkbox-label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.esi-checkbox-custom {
+  width: 16px;
+  height: 16px;
+  border: 3px solid #272727;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.esi-checkbox-label input[type="checkbox"]:checked + .esi-checkbox-custom::after {
+  content: '✓';
+  font-size: 11px;
+  color: #272727;
+  line-height: 1;
+}
+
+.esi-fine-print {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #6b5b4a;
+}
+
+/* Textarea */
+.esi-textarea {
+  background: none;
+  border: 3px solid #272727;
+  padding: 14px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #272727;
+  width: 100%;
+  min-height: 180px;
+  box-sizing: border-box;
+  outline: none;
+  resize: vertical;
+}
+
+.esi-textarea::placeholder {
+  color: #9e8e7a;
+}
+
+.esi-textarea:focus {
+  border-color: #5F3207;
+}
+
+/* Submit button */
+.esi-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FAC553;
+  border: 3px solid #272727;
+  padding: 12px 24px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: #272727;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.2s ease;
+}
+
+.esi-submit:hover {
+  background: #FFF1D9;
+}

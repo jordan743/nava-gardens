@@ -1,0 +1,324 @@
+/* ── Contact Page ───────────────────────────── */
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFC;
+}
+
+/* Top section: nav + panels, grows to fit card content */
+.contact-top {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Main two-panel layout fills remaining height */
+.contact-main {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+/* Left panel — illustration */
+.contact-left {
+  flex: 1;
+  background: #faebdc;
+  border-right: 3px solid #272727;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-sketch {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Right panel — teal background, card centred inside */
+.contact-right {
+  flex: 1;
+  background: #BAE8E5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 125px 56px 56px;
+  box-sizing: border-box;
+}
+
+/* Off-white bordered card */
+.contact-card {
+  background: #FDF3E2;
+  border: 3px solid #272727;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  max-width: 669px;
+  box-sizing: border-box;
+}
+
+/* Ornament — centred at top of card.
+   SVG has preserveAspectRatio="none" so we must lock both dimensions
+   to the viewBox ratio (51.39 × 42.06). */
+.contact-ornament {
+  width: 51px;
+  height: 42px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Info rows */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  width: 100%;
+}
+
+.contact-row {
+  display: flex;
+  gap: 72px;
+  align-items: flex-start;
+}
+
+.contact-row--git {
+  gap: 72px;
+}
+
+.contact-section-label {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.12;
+  color: #272727;
+  text-transform: uppercase;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.contact-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.contact-body-sm {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #272727;
+}
+
+.contact-body-sm strong {
+  font-weight: 600;
+}
+
+.contact-hours-grid {
+  display: flex;
+  gap: 56px;
+}
+
+.contact-label-upper {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #272727;
+}
+
+/* ── Footer ─────────────────────────────────── */
+.contact-footer {
+  background: #5F3207;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  gap: 32px;
+  padding: 48px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-col-title {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  color: #FDF3E2;
+  margin-bottom: 24px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #FDF3E2;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-links a .footer-link-arrow {
+  width: 13px;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.22s ease, transform 0.22s ease, margin-left 0.22s ease;
+  margin-left: 0;
+}
+
+.footer-links a:hover .footer-link-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  margin-left: 8px;
+}
+
+.footer-col--wide {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 500px;
+  flex-shrink: 0;
+}
+
+.footer-visit {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-serif-sm {
+  font-family: 'TerraneSerif', serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.1;
+  color: #FDF3E2;
+}
+
+.footer-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.footer-hours .contact-body-sm {
+  color: #FDF3E2;
+}
+
+.footer-hours-row {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-season {
+  font-style: italic;
+}
+
+.footer-email .footer-col-title {
+  margin-bottom: 16px;
+}
+
+.footer-email-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #FFF4E2;
+  padding-bottom: 10px;
+}
+
+.footer-email-placeholder {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  color: #FDF3E2;
+}
+
+.footer-email-arrow {
+  color: #FFF4E2;
+  font-size: 18px;
+}
+
+/* Wordmark row */
+.footer-wordmark-row {
+  display: flex;
+  align-items: stretch;
+}
+
+.footer-wordmark-link {
+  flex: 1;
+  background: #FDF3E2;
+  border: 3px solid #272727;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 85px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.footer-wordmark-link:hover .footer-wordmark {
+  transform: scale(1.04);
+}
+
+.footer-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: center;
+}
+
+.wordmark-nava {
+  width: 55%;
+  height: auto;
+  display: block;
+}
+
+.wordmark-gardens {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer-tile {
+  width: 374px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 3px solid #272727;
+  margin-left: -3px;
+  box-sizing: border-box;
+}
+
+.footer-tile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

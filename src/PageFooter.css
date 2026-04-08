@@ -1,0 +1,200 @@
+/* ── Shared Page Footer ───────────────────────── */
+.page-footer {
+  background: #5F3207;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Top info row ─────────────────────────────── */
+.pf-top {
+  display: flex;
+  gap: 72px;
+  padding: 48px;
+  align-items: flex-start;
+}
+
+.pf-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.pf-col--newsletter {
+  flex: 1;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.pf-col-title {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #FDF3E2;
+  white-space: nowrap;
+}
+
+.pf-body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #FDF3E2;
+}
+
+.pf-body-xs {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #FDF3E2;
+  margin: 0;
+}
+
+.pf-bold {
+  font-weight: 600;
+  font-size: 11px;
+}
+
+/* Hours */
+.pf-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pf-hours-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+/* Links */
+.pf-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pf-links a {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #FDF3E2;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pf-link-arrow {
+  width: 13px;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.22s ease, transform 0.22s ease, margin-left 0.22s ease;
+  margin-left: 0;
+}
+
+.pf-links a:hover .pf-link-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  margin-left: 8px;
+}
+
+/* Newsletter email input */
+.pf-email-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #FFF4E2;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.pf-email-placeholder {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.2;
+  color: #FDF3E2;
+}
+
+.pf-email-arrow {
+  color: #FFF4E2;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* ── Brand row (wordmark + flower tile) ───────── */
+/* height: 26vw keeps Figma proportions at any viewport width.
+   (At 1440px wide → 374px tall, matching the Figma frame exactly.) */
+.pf-brand-row {
+  display: flex;
+  align-items: stretch;
+  height: 26vw;
+  overflow: hidden;
+}
+
+/* Wordmark box — off-white fill, 6pt center-aligned border */
+.pf-wordmark-link {
+  flex: 1;
+  min-width: 0;
+  background: #FDF3E2;
+  border: 3px solid #272727;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.1vw 5.9vw;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.pf-wordmark-link:hover .pf-wordmark {
+  transform: scale(1.04);
+}
+
+.pf-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: center;
+}
+
+.pf-wordmark-nava {
+  width: 55%;
+  height: auto;
+  display: block;
+}
+
+.pf-wordmark-gardens {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Flower tile — height driven by the brand row (flex stretch),
+   width is auto so the square SVG determines its own width.
+   No aspect-ratio property to avoid the flex-stretch conflict.
+   overflow: visible so the SVG's outer stroke isn't clipped. */
+.pf-tile {
+  align-self: stretch;
+  flex-shrink: 0;
+  overflow: visible;
+  margin-left: -3px;
+}
+
+.pf-tile-img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
